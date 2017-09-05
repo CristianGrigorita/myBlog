@@ -8,8 +8,10 @@ function init(){
     
     $(function(){
         $("#header").load("/ui/assets/layout/navbar.html");
+        $("#header").load("ui/assets/layout/navbar.html");
         console.log('Nav bar loaded');
         $("#footer").load("/ui/assets/layout/footer.html");
+        $("#footer").load("ui/assets/layout/footer.html");
     });
     
     function subscribeToEvents(){

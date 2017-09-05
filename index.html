@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Blog</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="ui/assets/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="ui/assets/css/style.css" type="text/css" />
+    
+    
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="ui/assets/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="ui/assets/js/app.js"></script>
+    <script type="text/javascript" src="/ui/assets/js/ArticlesUiModule.js"></script>
+    <script type="text/javascript" src="ui/assets/js/signUpUi.js"></script>
+</head>
+<body>
+
+<div id="header"></div>
+
+
+<div class="content"></div>
+<div class="artComments"></div>
+
+
+
+<div class="defaultArticle"> <!--HTML DEFAULT ARTICLE-->
+<!--<div class="row">-->
+<!--    <div class="col s12 m8 offset-m2 articleContainer">-->
+<!--        <div class="row">-->
+<!--            <div class="col s12 m6 articles">-->
+<!--                <div class="card section scrollspy" id="artImage">-->
+<!--                    <div class="card-image">-->
+<!--                        <img src="/ui/assets/images/blacksmith.jpg">-->
+<!--                        <span class="card-title articleTitle"></span>-->
+<!--                    </div>-->
+<!--                    <p class="articleAuthor grey lighten-5" style="width:100%"></p>-->
+<!--                    <div class="card-content ">-->
+<!--                        <p class="textC articleContent"></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col s12 m2 buttonsContainer">-->
+<!--                <a class="waves-effect waves-light btn"><i class="material-icons left blue">comment</i>Comment</a>-->
+<!--                <a class="waves-effect waves-light btn createBtn"><i class="material-icons left blue">save</i>Create<i class="material-icons left red">verified_user</i></a>-->
+<!--                <a class="waves-effect waves-light btn"><i class="material-icons left blue">edit</i>Edit<i class="material-icons left red">verified_user</i></a>-->
+<!--                <a class="waves-effect waves-light btn"><i class="material-icons left blue">delete</i>Delete<i class="material-icons left red">verified_user</i></a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+</div>
+
+<!--Contact Modal Structure -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                  <input id="contact_first_name" type="text" class="validate">
+                  <label for="contact_first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="contact_last_name" type="text" class="validate">
+                    <label for="contact_last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="contactEmail" type="email" class="validate">
+                <label for="contactEmail">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <input id="contactSubject" type="text" class="validate">
+                <label for="contactSubject">Subject</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                <textarea id="contactMessage" class="materialize-textarea"></textarea>
+                <label for="contactMessage">Message</label>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a id="contactSubmitBtn" class="waves-effect waves-light btn">SUBMIT</a>
+    </div>
+</div>
+    
+<!-- Account Modal Structure -->
+<div id="acountModal" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#logInTab">Log In</a></li>
+                    <li class="tab col s3"><a href="#signUpTab">Sign Up</a></li>
+                </ul>
+            </div>
+            <div id="logInTab" class="col s12 logInContainer">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="logInEmail" type="email" class="validate">
+                        <label for="logInEmail" data-error="wrong" data-success="right">Email</label>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="logInPassword" type="password" class="validate">
+                        <label for="logInPassword">Password</label>
+                    </div>
+                </div>
+                    
+                <a class="waves-effect waves-light btn logInButton">LOGIN</a>
+            </div>
+                
+            <div id="signUpTab" class="col s12 singUpContainer">
+                <div class="row">
+                    <form class="col s12">
+                
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                            
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="userEmail" type="email" class="validate">
+                                <label for="userEmail" data-error="wrong" data-success="right">Email</label>
+                            </div>  
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="pass" type="password" class="validate">
+                                <label for="pass">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m12">
+                                <input id="passwordConfirm" type="password">
+                                <label id="lblPasswordConfirm" for="passwordConfirm" data-error="Password not match" data-success="Password Match">Confirm Password</label>
+                            </div>
+                        </div>
+                            
+                        <a class="waves-effect waves-light btn signUpButton">SIGN UP</a>
+                    </form>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div id="footer"></div>
+        
+
+</body>
+</html>

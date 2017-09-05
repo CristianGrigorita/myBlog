@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+#acountModal{
+    width: 35%;
+}
+
+.singUpContainer, .logInContainer{
+    margin-top: 10px;   
+}
+
+@media (min-width: 992px) {
+    .brand-logo{
+        margin-left: 100px;
+    }
+}
+/*Make footer fixed*/
+/*.page-footer{*/
+    /*position:fixed;*/
+    /*bottom:0;*/
+    /*width: 100%;*/
+/*}*/
+.page-footer {
+    padding-bottom: 20px;
+}
+.navDiv{
+    position:fixed;
+    top:0;
+    width: 100%;
+    z-index: 999;
+}
+
+.articleContainer, .commentsContainer, .scrollContainer{
+    margin-top: 25px;
+}
+
+.btn{
+    margin-top: 5px;
+}
+
+.content, .articlePage, .contact{
+    margin-top: 100px;
+}
+
+.dropdown-button{
+    margin-right: 10px;
+}
+
+.dropdown-content{
+    margin-top: 65px;
+}
+
+#lblPasswordConfirm{
+    width: 250px;
+}
+
+.artTitle{
+    top: 0;
+    bottom: auto;
+    font-size: 1.5rem;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    max-width: 100%;
+    padding: 20px;
+}
+
+/*.authorName:hover { */
+/*    font-size: 1rem;*/
+/*    color: orange;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.ultra-small{
+    margin-left: 5px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+.ultra-smallComment{
+    font-size: 0.6rem;
+}
+.commentTitle{
+    font-size: 1.2rem;
+}
+
+.commentText{
+    margin-top:10;
+}
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+
+.justifyText{
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 35px;
+}
+
+.hoverBtn{
+    bottom: -20px;
+    position: absolute !important;
+}
+
+.hoverBtn ul{
+    bottom: 35px;
+}
+
+.searchBar{
+    right: 10px;
+    padding: 10px;
+}
+
+.input-field input[type=search]:focus {
+  background-color: #42a5f5 !important;
+}
+
+#fixedbutton {
+    position: fixed;
+    top: 180px;
+    left: 0px; 
+}

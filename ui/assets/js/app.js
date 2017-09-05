@@ -89,7 +89,7 @@ function init(){
         console.log("on search ajax!");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/articles/search",
+            url: "http://localhost/myBlog/api/articles/search",
             data: setSearchData(),
             success: function(result){
                 result= result.data;
@@ -108,7 +108,7 @@ function init(){
         console.log("log out function");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/accounts/logOut",
+            url: "http://localhost/myBlog/api/accounts/logOut",
             data:{
                 
             },
@@ -126,7 +126,7 @@ function init(){
     function getOne(id){
         $.ajax({
             method: 'POST',
-            url: "https://blog-grigorita.c9users.io/api/articles/one",
+            url: "http://localhost/myBlog/api/articles/one",
             data: {
                 id: id,
             },
@@ -148,7 +148,7 @@ function init(){
         console.log("get comments ajax")
         $.ajax({
             method: 'POST',
-            url: "https://blog-grigorita.c9users.io/api/comments",
+            url: "http://localhost/myBlog/api/comments",
             data: {
                 article_id: id,
             },
@@ -185,7 +185,7 @@ function init(){
         console.log("in add comment ajx")
         $.ajax({
         method: 'POST',
-        url: "https://blog-grigorita.c9users.io/api/comments/add",
+        url: "http://localhost/myBlog/api/comments/add",
         data: commentData(id),
         success: function(result){
             console.log("succesfully added comment: ", result);
@@ -202,7 +202,7 @@ function init(){
         console.log("am intrat in getArticles, ajax");
         $.ajax({
             method: "GET",
-            url: "https://blog-grigorita.c9users.io/api/articles",
+            url: "http://localhost/myBlog/api/articles",
             success: function(result) {
                 console.log (result);
                 result = result.data;
@@ -220,7 +220,7 @@ function init(){
         console.log("check role ajax");
         $.ajax({
             method: "GET",
-            url: "https://blog-grigorita.c9users.io/api/accounts/role",
+            url: "http://localhost/myBlog/api/accounts/role",
             success: function(result){
                 role = result.data;
                 getArticles(role);
@@ -259,7 +259,7 @@ function init(){
         console.log("sign up function");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/accounts/signUp",
+            url: "http://localhost/myBlog/api/accounts/signUp",
             data: setSingUpInfo(),
             success: function(result) {
                 console.log(result);  
@@ -284,7 +284,7 @@ function init(){
         console.log("log in function");
             $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/accounts/logIn",
+            url: "http://localhost/myBlog/api/accounts/logIn",
             data: setLogInInfo(),
             success: function(result) {
                 console.log("this is the succes result: ", result);
@@ -317,7 +317,7 @@ function init(){
         console.log("contact info");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/contact",
+            url: "http://localhost/myBlog/api/contact",
             data: setContactInfo(),
             success: function(result){
                 console.log("success in sending message trough contact: ", result);  
@@ -354,7 +354,7 @@ function init(){
         console.log("create new article");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/articles/create",
+            url: "http://localhost/myBlog/api/articles/create",
             data: createArticleData(),
             processData: false,
             contentType: false,
@@ -393,7 +393,7 @@ function init(){
         console.log("edit article");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/articles/edit",
+            url: "http://localhost/myBlog/api/articles/edit",
             data: editArticleData(articleId, defaultImage),
             processData: false,
             contentType: false,
@@ -413,7 +413,7 @@ function init(){
         console.log("delete article");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/articles/delete",
+            url: "http://localhost/myBlog/api/articles/delete",
             data: {
                 id: id,
             },
@@ -431,7 +431,7 @@ function init(){
         console.log("edit article page");
         $.ajax({
             method: "POST",
-            url: "https://blog-grigorita.c9users.io/api/articles/one",
+            url: "http://localhost/myBlog/api/articles/one",
             data: {
                 id: id,
             },

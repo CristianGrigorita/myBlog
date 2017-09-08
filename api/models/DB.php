@@ -3,8 +3,8 @@ class DB{
     protected $db;
     
     function __construct(){
-        $servername = getenv('IP');
-        $username = getenv('C9_USER');
+        $servername = "localhost";
+        $username = "root";
         $password = "";
         $database = "blog";
         

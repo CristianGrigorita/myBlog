@@ -1,8 +1,8 @@
 <?php
 session_start();
 require "configs/routes.php";
-define ("APP_FOLDER", "/api");
-$currentRoute = str_replace(APP_FOLDER, "", $_SERVER["REDIRECT_URL"]);
+define ("APP_FOLDER", "myBlog/api/");
+$currentRoute = str_replace(APP_FOLDER, "", $_SERVER["REQUEST_URI"]);
 if (!empty($currentRoute)) {
     if (array_key_exists($currentRoute, $routes)) {
         $class = $routes[$currentRoute]["class"];

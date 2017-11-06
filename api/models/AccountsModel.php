@@ -7,7 +7,7 @@ class AccountsModel extends DB {
                     $item["last_name"],
                     $item["email"],
                     $item["password"]];
-        $query = 'INSERT INTO `users`(`first_name`, `last_name`, `email`, `password`) VALUES (?,?,?,?)';
+        $query = 'INSERT INTO users(first_name, last_name, email, password) VALUES (?,?,?,?)';
         $sth = $this->db->prepare($query);
         $sth->execute($params);
         return $this->db->lastInsertId();

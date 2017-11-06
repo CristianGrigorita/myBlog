@@ -41,7 +41,7 @@ class ArticlesModel extends DB {
                     $item["published"],
                     $item["image"],
                     $item["user_id"] = $_SESSION["user_id"]];
-        $query = 'INSERT INTO `articles`(`title`, `content`, `published`, `image`, user_id) VALUES (?,?,?,?,?)';
+        $query = "INSERT INTO articles (title, content, published, image, user_id) VALUES (?,?,?,?,?)";
         $sth = $this->db->prepare($query);
         $sth->execute($params);
         return $this->db->lastInsertId();

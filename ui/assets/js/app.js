@@ -92,7 +92,7 @@ function init(){
             url: "http://localhost/myBlog/api/articles/search",
             data: setSearchData(),
             success: function(result){
-                result= result.data;
+                result = result.data;
                 ArticlesUiModule.displayArticles(result, role);
                 console.log(result);
             },
@@ -188,8 +188,9 @@ function init(){
         url: "http://localhost/myBlog/api/comments/add",
         data: commentData(id),
         success: function(result){
-            console.log("succesfully added comment: ", result);
             result = result.data;
+            console.log("succesfully added comment: ", result);
+            
         },
         error: function(XHR, textStatus, error){
             console.log('error adding comments for selected article', error);

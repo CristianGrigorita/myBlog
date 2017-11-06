@@ -186,7 +186,6 @@ if (role == "admin"){
     }
     
     return {
-        
         displayArticles: function(articles, role) {
             console.log("role got in display: ", role);
             $('.content').html(getArticlesHtml(articles,role));

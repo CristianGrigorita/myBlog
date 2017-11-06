@@ -18,8 +18,8 @@ class CommentsModel extends DB {
                     $item['article_id'],
                     $item['user_id'] = $_SESSION['user_id']];
         $query = "INSERT INTO comments (title, comment, article_id, user_id) VALUES (?,?,?,?)";
-        $sth = $this->db->prepare($query);
-        $sth->execute($params);
+        $sth = $this -> db ->prepare($query);
+        $sth ->execute($params);
         return $this->db->lastInsertId();
     }
 }

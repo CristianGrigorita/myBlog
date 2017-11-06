@@ -48,7 +48,7 @@ class Articles{
                 return error_response("Not an image!");
             } else {
                 move_uploaded_file($file['tmp_name'], '../ui/assets/images/' . $file['name']);
-                $_POST['image'] = "/ui/assets/images/" . $file['name'];
+                $_POST['image'] = "ui/assets/images/" . $file['name'];
                 return success_response($this->articlesModel->addItem($_POST));
             }
         }

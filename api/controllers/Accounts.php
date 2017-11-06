@@ -35,9 +35,7 @@ class Accounts{
             $_POST['password'] = crypt($_POST['password'], $salt);
             
             $user = $this->accountsModel->getUser($_POST);
-            if  (!empty(user)) {
-                //session_destroy();
-                session_start();
+            if  (!empty($user)) {
                 $_SESSION["isLogged"]=TRUE;
                 $_SESSION["email"]= $_POST["email"];
                 $_SESSION["name"] = $user["last_name"] . " " . $user["first_name"];
